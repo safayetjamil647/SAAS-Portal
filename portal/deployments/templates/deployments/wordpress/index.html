@@ -1,0 +1,27 @@
+{% extends "wagtailadmin/base.html" %}
+{% block titletag %}{{ current_year }} Cluster Admin{% endblock %}
+
+{% block extra_css %}
+    {{ block.super }}
+    <style>
+    .button-border {
+    background-color: white;
+    color: black;
+    border: 2px solid #100652; /* Blue*/
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+  }
+    </style>
+{% endblock %}
+
+{% block content %}
+    {% include "wagtailadmin/shared/header.html" with title="Cluster Admin" icon="globe" %}
+
+    <div class="nice-padding">
+        <h1>Wordpress</h1>
+        <button type="button" class="button-border">Deploy Wordpress</button>
+    </div>
+{% endblock %}
